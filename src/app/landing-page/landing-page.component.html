@@ -1,0 +1,35 @@
+<div class="global-container">
+    <app-header (scrollPosChanged)="scrollPos($event)"></app-header>
+    <div class="background">
+        <div class="caption">
+            CREATIVE ART
+        </div>
+        <div class="title-content">
+            COLLABORATIVE ART <br>
+            LET YOU CREATIVE SIDE TAKE OVER
+        </div>
+    </div>
+    <div class="container">
+        <div class="rules" [ngClass]="rulesTransition?'left-transition':''">
+            <h2>Rules</h2>
+            <ul>
+                <li>A pixelated canval is provided where each user can contribute pixels.</li>
+                <li>Each user gets 50 pixels.</li>
+                <li>User is allowed to pick from 16 colors provided.</li>
+                <li>The end goal is to create an art.</li>
+                <li>Since only 50px are given to each user, make a group and make 
+                    a collobarative art.
+                </li>
+            </ul>
+        </div>
+        <div class="sample-art">
+            <h2 class="caption-sample-art" [ngClass]="sampleArt?'left-transition':''">SAMPLE ART</h2>
+        </div>
+        <img class="sample1" [ngClass]="sampleImgOne?'left-transition':''" src="../../assets/images/sample1.png" alt="sample1">
+        <div class="canvas-btn-div">
+            <button (click)="navToCanvas()" class="canvas-btn" [ngClass]="sampleImgTwo?'left-transition':''">GO TO CANVAS</button>
+            <img class="sample2"  [ngClass]="sampleImgTwo?'left-transition':''" src="../../assets/images/sample2.png" alt="sample2">
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

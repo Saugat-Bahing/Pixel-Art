@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+.background {
+    width: 100%;
+    height: 600px;
+    background-image: url("../../assets/images/bg.jpg");
+    background-size: cover;
+}
+
+.caption {
+    color: rgb(227, 227, 227);
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Crete Round', serif;
+    letter-spacing: 15px;
+    padding-top: 75px;
+}
+
+.title-content {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 190px;
+    padding-top: 90px;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.rules {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    transition: 0.6s;
+    transform: translateX(-100vw);
+    margin-bottom: 20px;
+}
+
+.rules ul {
+    margin-left: 50px;
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.sample-art {
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+.caption-sample-art {
+    transform: translateX(-100vw);
+    transition: 0.6s;
+}
+
+.sample1 {
+    width: 600px;
+    margin-left: 50px;
+    display: block;
+    margin-top: 20px;
+    transform: translateX(-100vw);
+    transition: 0.8s;
+}
+
+.sample2 {
+    width: 400px;
+    margin-top: 20px;
+    margin-right: 2vw;
+    transform: translateX(100vw);
+    transition: 0.5s;
+}
+
+.sample1:hover {
+    box-shadow: 0 0 5px black;
+}
+
+.sample2:hover {
+    box-shadow: 0 0 5px black;
+}
+
+.canvas-btn-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.canvas-btn {
+    color: aliceblue;
+    text-shadow: 0 0 5px red;
+    margin-left: 50px;
+    width: 600px;
+    height: 200px;
+    font-size: 5rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    box-shadow: 0 0 5px grey;
+    background-image: url("../../assets/images/btn-img.jpg");
+    background-size: cover;
+    cursor: pointer;
+    transform: translateX(-100vw);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.left-transition {
+
+    transform: translateX(0vw);
+}

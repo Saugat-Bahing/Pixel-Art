@@ -1,0 +1,43 @@
+<div class="container" [ngClass]="toggleHeader?'compressed':''">
+    <div class="logo-content" *ngIf="!toggleHeader">
+        <div class="logo1">
+            <div class="pixel-container">
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+            <div class="pixel-container">
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+            <div class="five"></div>
+        </div>
+        <div class="logo-caption">
+            PIXEL <br>
+            ART
+        </div>
+    </div>
+    <div class="logo2" *ngIf="toggleHeader">
+        <div class="pixel-container">
+            <div class="one1"></div>
+            <div class="two1"></div>
+        </div>
+        <div class="pixel-container">
+            <div class="three1"></div>
+            <div class="four1"></div>
+        </div>
+        <div class="five1"></div>
+    </div>
+    <div class="feature">
+        <div class="canvas-btn" [ngClass]="toggleHeader?'btn-change':''" (click)="navCanvas()">
+            CANVAS
+        </div>
+        <div *ngIf="enableLogin else logout" class="login-btn" [ngClass]="toggleHeader?'btn-change':''" (click)="navLogin()">
+            LOGIN
+        </div>
+        <ng-template #logout >
+            <div class="login-btn" [ngClass]="toggleHeader?'btn-change':''" (click)="logOut()">
+                LOGOUT
+            </div>
+        </ng-template>
+    </div>
+</div>

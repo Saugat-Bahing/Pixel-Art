@@ -1,0 +1,47 @@
+<div class="global-container">
+    <div class="header">
+        <div class="logo2">
+            <div class="pixel-container">
+                <div class="one1"></div>
+                <div class="two1"></div>
+            </div>
+            <div class="pixel-container">
+                <div class="three1"></div>
+                <div class="four1"></div>
+            </div>
+            <div class="five1"></div>
+        </div>
+        <a [routerLink]="'../'">
+            <div class="home-btn">
+                HOME
+            </div>
+        </a>
+    </div>
+    <div class="container">
+        <div class="tools">
+            <div class="view">
+                Pixel view
+                <div class="outer" (click)="pixelView = !pixelView">
+                    <div class="slider" [ngClass]="!pixelView?'slider-move':''"></div>
+                </div>
+                Grid View
+            </div>
+            <div class="pixel-count">
+                Remaining Pixels: {{ pixelCount }}
+            </div>
+        </div>
+        <div class="canvas">
+            <div class="row" *ngFor="let row of grid; let i=index">
+                <div class="pixel" *ngFor="let pixel of row; let j = index" [ngClass]="!pixelView?'border':''" (click)="selectPixel(i, j)" [style.background-color]="grid[i][j].color"></div>
+            </div>
+        </div>
+        <div class="color-pallet" *ngIf="colorPallet">
+            <button *ngFor="let color of colors" class="color" [style.background-color]="color" (click)="selectColor(color)"></button>
+            <button class="btn-cancle" (click)="cancle()">Cancle</button>
+            <button class="btn-confirm" (click)="confirm()">Confirm</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div>Contact - saugatrai.5432@gmail.com</div>
+    </div>
+</div>

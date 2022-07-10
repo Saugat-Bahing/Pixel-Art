@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="frame">
+        <div class="logo">
+            <div class="pixel-container">
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+            <div class="pixel-container">
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+            <div class="five"></div>
+        </div>
+        <form class="signup-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
+            <div class="field-div">
+                <label for="email">Email</label>
+                <input id="email" type="text" formControlName="email">
+                <small *ngIf="!Form.get('email')?.valid && Form.get('email')?.touched">*Enter a valid email!</small>
+            </div>
+            <div class="field-div">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password">
+                <small *ngIf="!Form.get('password')?.valid && Form.get('password')?.touched">*Enter your password!</small>
+            </div>
+            <div class="field-div">
+                <label for="confirm-password">Confirm Password</label>
+                <input id="confirm-password" type="password" formControlName="confirm_password" (input)="verifyPasswordMatch()">
+                <small *ngIf="!passwordMatch && Form.get('confirm_password')?.touched">*Passwords does'nt match!</small>
+            </div>
+            <div class="btn-div">
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </div>
+        </form>
+        <div class="login-nav">Already Signed Up? <a [routerLink]="'../login'">Login</a></div>
+    </div>
+</div>

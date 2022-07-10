@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="frame">
+        <div class="logo">
+            <div class="pixel-container">
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+            <div class="pixel-container">
+                <div class="three"></div>
+                <div class="four"></div>
+            </div>
+            <div class="five"></div>
+        </div>
+        <form class="login-form" [formGroup]="Form" (ngSubmit)="onSubmit()">
+            <div class="field-div">
+                <label for="email">Email</label>
+                <input id="email" type="text" formControlName="email">
+                <small *ngIf="!Form.get('email')?.valid && Form.get('email')?.touched">*Enter a valid email!</small>
+            </div>
+            <div class="field-div">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password">
+                <small *ngIf="!Form.get('password')?.valid && Form.get('password')?.touched">*Enter your password!</small>
+            </div>
+            <div class="btn-div">
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+        </form>
+        <div class="forgot-password"><a [routerLink]="'../reset-password'">Forgot Password?</a></div>
+        <div class="signup-nav">Not Signed Up? <a [routerLink]="'../sign-up'">Sign Up</a></div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pixel-art-a4e6e": {
+      "hosting": {
+        "pixel-art": [
+          "pixel-art-a4e6e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pixel-art-a4e6e"
+  }
+}

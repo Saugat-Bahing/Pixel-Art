@@ -1,0 +1,93 @@
+.container {
+    transition: 0.3s;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding: 5.5vw 6.25vw 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.compressed {
+    padding: 0 40px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.logo1 {
+    width: 50px;
+    height: 90px;
+    /* border: 1px solid red;    */
+}
+
+.one, .two, .three, .four, .five {
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+}
+
+.one1, .two1, .three1, .four1, .five1 {
+    background-color: black;
+    width: 20px;
+    height: 20px;
+}
+
+.logo2 {
+    width: 50px;
+    height: 80px;
+    padding: 5px;
+    /* border: 1px solid red;    */
+}
+
+.pixel-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-content {
+    display: flex;
+}
+
+.logo-caption {
+    color: aliceblue;
+    font-size: 1.8rem;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.canvas-btn {
+    font-size: 1.8rem;
+    color: aliceblue;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    /* margin-right: 15vw; */
+    /* border: 1px solid red; */
+}
+
+.login-btn {
+    font-size: 1.8rem;
+    color: aliceblue;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    margin-right: 15vw;
+}
+
+.btn-change {
+    color: black;
+    margin-top: 25px;
+}
+
+
+.feature {
+    display: flex;
+}
+
